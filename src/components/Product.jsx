@@ -1,4 +1,9 @@
+import { useContext } from 'react'
+import { CartContext } from '../context/CartContext'
+
 export default function Product({ product }) {
+  const { addToCart } = useContext(CartContext)
+
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
       <div className="flex h-56 items-center justify-center bg-gray-50 p-6">
@@ -20,6 +25,7 @@ export default function Product({ product }) {
           <button
             className="rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-gray-700"
             type="button"
+            onClick={() => addToCart(product)}
           >
             Add to Cart
           </button>

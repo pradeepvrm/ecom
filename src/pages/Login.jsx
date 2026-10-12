@@ -89,7 +89,7 @@ export default function Login() {
                     <button
                         type="submit"
                         className={`w-full rounded-md px-4 py-2 text-sm font-semibold text-white transition-colors ${
-                            isValid ? 'bg-indigo-600 hover:bg-indigo-700' : 'bg-red-600 hover:bg-red-700'
+                            isValid ? 'bg-gray-900 hover:bg-gray-700' : 'bg-red-600 hover:bg-red-700'
                         }`}>
                         Login
                     </button>
