@@ -5,7 +5,6 @@ export default function Product({ product }) {
         <img
           className="h-full w-full object-contain"
           src={product.image}
-          alt={product.title}
         />
       </div>
       <div className="flex flex-1 flex-col p-5">
