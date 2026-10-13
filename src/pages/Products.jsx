@@ -9,8 +9,8 @@ export default function Products() {
     
     useEffect(() => {
         const getProducts = async () => {
-            const response = await axios.get('https://fakestoreapi.com/products')
-            setProducts(response.data)
+            const response = await axios.get('https://dummyjson.com/products?limit=200')
+            setProducts(response.data.products)
         }
         getProducts()
     }, [])

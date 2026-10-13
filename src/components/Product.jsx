@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
+import { Link } from 'react-router'
 
 export default function Product({ product }) {
   const { addToCart } = useContext(CartContext)
@@ -7,10 +8,16 @@ export default function Product({ product }) {
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
       <div className="flex h-56 items-center justify-center bg-gray-50 p-6">
-        <img
-          className="h-full w-full object-contain"
-          src={product.image}
-        />
+        <Link
+          className="h-full w-full"
+          to={`/products/${product.id}`}
+        >
+          <img
+            className="h-full w-full object-contain"
+            src={product.thumbnail}
+            alt={product.title}
+          />
+        </Link>
       </div>
       <div className="flex flex-1 flex-col p-5">
         <p className="mb-2 text-sm capitalize text-gray-500">{product.category}</p>

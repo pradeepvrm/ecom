@@ -21,7 +21,7 @@ export default function Cart() {
             <div className="w-full">
               {cart.map((item) => (
                 <div key={item.id} className="flex gap-4 border-b pb-4">
-                  <img src={item.image} alt={item.title} className="h-20 w-20 object-contain" />
+                  <img src={item.thumbnail} alt={item.title} className="h-20 w-20 object-contain" />
                   <div className="flex-1">
                     <h3 className="font-semibold">{item.title}</h3>
                     <p className="text-gray-600">${item.price}</p>
