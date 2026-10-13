@@ -1,4 +1,5 @@
 import { Link } from 'react-router'
+import ProductSearch from './ProductSearch'
 
 export default function Navbar() {
   return (
@@ -15,6 +16,7 @@ export default function Navbar() {
             <Link className="transition hover:text-gray-950" to="/cart">Cart</Link>
           </li>
         </ul>
+        <ProductSearch />
         <div className="ml-auto flex items-center gap-4 text-md font-medium">
           <Link className="cursor-pointer text-gray-700 transition hover:text-gray-950" to="/login">Login</Link>
           <Link className="cursor-pointer rounded-md bg-gray-900 px-4 py-2 text-white transition hover:bg-gray-700" to="/signup">
