@@ -105,27 +105,11 @@ export default function ProductSearch() {
                   </Link>
                 </li>
               ))}
-              <li className="border-t border-gray-100">
-                <button
-                  className="w-full px-4 py-3 text-left text-sm font-medium text-gray-700 transition hover:bg-gray-50"
-                  onMouseDown={(event) => event.preventDefault()}
-                  type="submit"
-                >
-                  See all results for “{normalizedQuery}”
-                </button>
-              </li>
             </ul>
           )}
           {!isSearching && !searchError && products.length === 0 && (
             <div className="px-4 py-3 text-sm text-gray-500">
               <p>No products found.</p>
-              <button
-                className="mt-2 font-medium text-gray-800 hover:underline"
-                onMouseDown={(event) => event.preventDefault()}
-                type="submit"
-              >
-                See all results for “{normalizedQuery}”
-              </button>
             </div>
           )}
         </div>
