@@ -17,19 +17,39 @@ export default function Cart() {
         {cart.length === 0 ? (
           <p className="text-gray-600">Your cart is empty</p>
         ) : (
-          <div className="flex gap-8">
-            <div className="w-full">
+          <div className="flex flex-col gap-6 lg:flex-row lg:gap-8">
+            <div className="w-full min-w-0 flex-1">
               {cart.map((item) => (
-                <div key={item.id} className="flex gap-4 border-b pb-4">
-                  <img src={item.thumbnail} alt={item.title} className="h-20 w-20 object-contain" />
-                  <div className="flex-1">
-                    <h3 className="font-semibold">{item.title}</h3>
+                <div key={item.id} className="flex gap-3 border-b py-4 first:pt-0 sm:gap-4">
+                  <img src={item.thumbnail} alt={item.title} className="h-16 w-16 shrink-0 object-contain sm:h-20 sm:w-20" />
+                  <div className="min-w-0 flex-1">
+                    <h3 className="break-words font-semibold">{item.title}</h3>
                     <p className="text-gray-600">${item.price}</p>
-                    <div className="flex items-center gap-2 mt-2">
-                      <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
-                      <span>{item.quantity}</span>
-                      <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
-                      <button onClick={() => removeFromCart(item.id)} className="ml-auto text-red-600">Remove</button>
+                    <div className="mt-2 flex flex-wrap items-center gap-2">
+                      <button
+                        type="button"
+                        aria-label={`Decrease quantity of ${item.title}`}
+                        onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                        className="rounded border border-gray-300 px-3 py-1 hover:bg-gray-100"
+                      >
+                        -
+                      </button>
+                      <span className="min-w-6 text-center">{item.quantity}</span>
+                      <button
+                        type="button"
+                        aria-label={`Increase quantity of ${item.title}`}
+                        onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                        className="rounded border border-gray-300 px-3 py-1 hover:bg-gray-100"
+                      >
+                        +
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => removeFromCart(item.id)}
+                        className="ml-auto text-red-600 hover:text-red-700"
+                      >
+                        Remove
+                      </button>
                     </div>
                   </div>
                 </div>
