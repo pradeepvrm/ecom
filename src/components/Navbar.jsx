@@ -1,5 +1,25 @@
+import { UserButton, useAuth } from '@clerk/react'
 import { Link } from 'react-router'
 import ProductSearch from './ProductSearch'
+
+function AccountMenu() {
+  const { isLoaded, isSignedIn } = useAuth()
+
+  if (!isLoaded) return null
+
+  if (isSignedIn) {
+    return <UserButton />
+  }
+
+  return (
+    <>
+      <Link className="cursor-pointer text-gray-700 transition hover:text-gray-950" to="/login">Login</Link>
+      <Link className="cursor-pointer rounded-md bg-gray-900 px-4 py-2 text-white transition hover:bg-gray-700" to="/signup">
+        Sign up
+      </Link>
+    </>
+  )
+}
 
 export default function Navbar() {
   return (
@@ -18,10 +38,7 @@ export default function Navbar() {
         </ul>
         <ProductSearch />
         <div className="ml-auto flex items-center gap-4 text-md font-medium">
-          <Link className="cursor-pointer text-gray-700 transition hover:text-gray-950" to="/login">Login</Link>
-          <Link className="cursor-pointer rounded-md bg-gray-900 px-4 py-2 text-white transition hover:bg-gray-700" to="/signup">
-            Sign up
-          </Link>
+            <AccountMenu />
         </div>
       </div>
     </nav>

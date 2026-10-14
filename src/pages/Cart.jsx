@@ -23,7 +23,7 @@ export default function Cart() {
                 <div key={item.id} className="flex gap-3 border-b py-4 first:pt-0 sm:gap-4">
                   <img src={item.thumbnail} alt={item.title} className="h-16 w-16 shrink-0 object-contain sm:h-20 sm:w-20" />
                   <div className="min-w-0 flex-1">
-                    <h3 className="break-words font-semibold">{item.title}</h3>
+                    <h3 className="font-semibold">{item.title}</h3>
                     <p className="text-gray-600">${item.price}</p>
                     <div className="mt-2 flex flex-wrap items-center gap-2">
                       <button

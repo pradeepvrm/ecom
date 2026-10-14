@@ -15,7 +15,6 @@ export default function Product({ product }) {
           <img
             className="h-full w-full object-contain"
             src={product.thumbnail}
-            alt={product.title}
           />
         </Link>
       </div>
