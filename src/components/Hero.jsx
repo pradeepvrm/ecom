@@ -40,8 +40,11 @@ export default function Hero() {
                     <div className="mb-3 flex items-center justify-between text-xs uppercase tracking-[0.2em] text-slate-400">
                       <span>Featured Products</span>
                     </div>
-                    <div className="rounded-[20px] bg-white/5 p-4">
-                      <div className="h-36 rounded-[18px] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0)_55%),linear-gradient(135deg,#8b5cf6,#312e81_34%,#0ea5e9)]" />
+                    <div className="">
+                      <img
+                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80"
+                        className="h-36 w-full rounded-[18px] object-cover"
+                      />
                     </div>
                   </div>
 
