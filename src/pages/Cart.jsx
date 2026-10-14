@@ -20,9 +20,10 @@ export default function Cart() {
         </div>
 
         {cart.length === 0 ? (
-          <div className="rounded-[28px] border border-dashed border-slate-300 bg-white/60 p-10 text-center text-slate-600 shadow-lg shadow-slate-200/50">
-            Your cart is empty.
-          </div>
+          <section className="glass-card p-8 text-center">
+            <p className="text-slate-600">Your cart is empty.</p>
+            <Link to="/products" className="primary-button mt-5">Browse products</Link>
+          </section>
         ) : (
           <div className="flex flex-col gap-6 lg:flex-row lg:gap-8">
             <div className="w-full min-w-0 flex-1 space-y-4">

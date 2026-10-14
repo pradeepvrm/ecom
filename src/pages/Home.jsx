@@ -24,9 +24,6 @@ export default function Home() {
             }
           ].map((item) => (
             <div key={item.title} className="glass-card p-6">
-              {/* <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-linear-to-br from-violet-500 to-indigo-500 text-base font-bold text-white shadow-lg shadow-violet-500/20">
-                {item.title[0]}
-              </div> */}
               <h2 className="text-xl font-semibold text-slate-900">{item.title}</h2>
               <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
             </div>

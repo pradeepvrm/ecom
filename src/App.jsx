@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router'
 import { CartProvider } from './context/CartContext'
-import { Home, Products, SingleProduct, Cart, Login, Signup } from './pages'
+import { Home, Products, SingleProduct, Cart, Checkout, Login, Signup } from './pages'
 
 function App() {
 
@@ -13,6 +13,7 @@ function App() {
           <Route path='/products' element={<Products />} />
           <Route path='/products/:id' element={<SingleProduct />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/checkout' element={<Checkout />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
         </Routes>
